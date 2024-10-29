@@ -1,0 +1,5 @@
+npm init -v
+npm i express mysql dotenv hbs nodemon
+
+add "start": "nodemon app.js" under script in package.json
+npm start <-debug
