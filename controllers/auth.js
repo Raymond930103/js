@@ -21,11 +21,11 @@ exports.register = (req, res) => {
 
         if (result.length > 0){
             return res.render('register', {
-                message: 'That email has been taken'
+                message_register: 'That email has been taken'
             })
         } else if (password !== confirmPassword){
             return res.render('register', {
-                message: 'Password do not match'
+                message_register: 'Password do not match'
             })
         }
 
@@ -37,7 +37,7 @@ exports.register = (req, res) => {
             }else{
                 console.log(result)
                 return res.render('register', {
-                    message: 'Success!'
+                    message_register: 'Success!'
                 })
             }
         })

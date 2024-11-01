@@ -19,7 +19,7 @@ exports.login = (req, res) => {
         if (error) {
             console.error("Database query error:", error);  // Log any database errors
             return res.status(500).render('login', {
-                message: 'Server error. Please try again later.'
+                message_login: 'Server error. Please try again later.'
             });
         }
 
@@ -28,7 +28,7 @@ exports.login = (req, res) => {
         if (results.length === 0) {
             console.log("Email not found in database.");  // Log if email doesn't exist
             return res.status(401).render('login', {
-                message: 'Email not found.'
+                message_login: 'Email not found.'
             });
         }
 
@@ -43,7 +43,7 @@ exports.login = (req, res) => {
         if (!isMatch) {
             console.log("Incorrect password entered.");  // Log if the password is incorrect
             return res.status(401).render('login', {
-                message: 'Incorrect password.'
+                message_login: 'Incorrect password.'
             });
         }
 

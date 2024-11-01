@@ -20,8 +20,7 @@
         <form action="/auth/login" method="post">
             <h2>會員登入</h2>
 
-            <input type="text" id="username" name="username" placeholder="帳號" required>
-
+                <input type="email" id="email" name="email" placeholder="電子郵件" required>
             <div class="password-field">
                 <input type="password" id="password" name="password" placeholder="密碼" required>
                 <button type="button" class="toggle-password" onclick="togglePassword('password', this)">顯示</button>
@@ -29,6 +28,10 @@
 
             <button type="submit">登入</button>
             <button type="button" class="secondary-button" onclick="location.href='/register'">註冊會員</button>
+
+        {{#if message_login}}
+            <h4 class = 'alert alert-danger mt-4'>{{message_login}}</h4>
+        {{/if}}
         </form>
     </div>
 
