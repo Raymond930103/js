@@ -1,0 +1,13 @@
+# 忽略 node_modules 資料夾
+node_modules/
+
+# 忽略環境變數檔案
+.env
+
+# 忽略編譯輸出
+dist/
+build/
+
+# 忽略操作系統產生的暫存檔
+.DS_Store
+Thumbs.db
